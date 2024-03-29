@@ -149,11 +149,3 @@ CREATE TABLE PaysFor (
     renting_id INTEGER REFERENCES Renting(renting_id) ON DELETE CASCADE,
     PRIMARY KEY (payment_id, customer_id, id_type, renting_id)
 );
-
-
-
--- Execute triggers
-\i 8_hotel_management_triggers.sql
-
--- Execute views
-\i 9_hotel_management_views.sql
