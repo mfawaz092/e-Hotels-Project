@@ -152,3 +152,8 @@ CREATE TABLE PaysFor (
 
 
 
+-- Execute triggers
+\i 8_hotel_management_triggers.sql
+
+-- Execute views
+\i 9_hotel_management_views.sql
