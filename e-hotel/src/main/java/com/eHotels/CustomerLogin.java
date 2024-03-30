@@ -8,15 +8,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet("/Login")
+@WebServlet("/CustomerLogin")
 public class CustomerLogin extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
+        String customerUsername = request.getParameter("customerUsername");
+        String customerPassword = request.getParameter("customerPassword");
 
-        if (isValidUser(username, password)) {
+        if (isValidUser(customerUsername, customerPassword)) {
             HttpSession session = request.getSession();
-            session.setAttribute("username", username);
+            session.setAttribute("customerUsername", customerUsername);
             response.sendRedirect("/customer-homepage.jsp");
         } else {
             request.setAttribute("error", "Invalid username or password");
@@ -24,7 +24,7 @@ public class CustomerLogin extends HttpServlet {
         }
     }
 
-    private boolean isValidUser(String username, String password) {
-        return username.equals("customer") && password.equals("123");
+    private boolean isValidUser(String customerUsername, String customerPassword) {
+        return customerUsername.equals("customer") && customerPassword.equals("123");
     }
 }
