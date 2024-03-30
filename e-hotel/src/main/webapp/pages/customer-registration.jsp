@@ -4,7 +4,7 @@
     <title>Customer Registration</title>
 </head>
 <body>
-    <a href="./customer-login.html">Return to login</a> 
+    <a href="customer-login.jsp">Return to Login</a>
     <h1>Customer Registration</h1>
     
     <form>
