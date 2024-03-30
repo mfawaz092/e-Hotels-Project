@@ -7,7 +7,7 @@
 <div class="container">
     <a href="../index.jsp">Return to home</a>
     <h1>Customer Login</h1>
-    <form action="/CustomerLogin" method="post">
+    <form action="../CustomerLogin" method="post">
         <label for="customerUsername">Username:</label>
         <input type="text" id="customerUsername" name="customerUsername" required>
 

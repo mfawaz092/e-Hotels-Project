@@ -1,5 +1,3 @@
-package com.eHotels;
-
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,7 +15,7 @@ public class CustomerLogin extends HttpServlet {
         if (isValidUser(customerUsername, customerPassword)) {
             HttpSession session = request.getSession();
             session.setAttribute("customerUsername", customerUsername);
-            response.sendRedirect("/customer-homepage.jsp");
+            response.sendRedirect("customer-homepage.jsp");
         } else {
             request.setAttribute("error", "Invalid username or password");
             request.getRequestDispatcher("customer-login.jsp").forward(request, response);
