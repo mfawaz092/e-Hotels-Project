@@ -25,7 +25,6 @@ public class Login extends HttpServlet {
     }
 
     private boolean isValidUser(String username, String password) {
-        // Hardcoded validation, replace with actual logic
         return username.equals("customer") && password.equals("123");
     }
 }
