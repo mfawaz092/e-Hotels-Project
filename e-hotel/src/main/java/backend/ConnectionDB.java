@@ -8,8 +8,11 @@ import java.sql.SQLException;
 public class ConnectionDB {
 
     /* Database connection settings, change dbName, dbusername, dbpassword */
+    private final String ipAddress = "127.0.0.1";
+    private final String dbServerPort = "5432";
+    private final String dbName = "postgres";
     private final String dbusername = "postgres";
-    private final String dbpassword = "ehotels";
+    private final String dbpassword = "";
 
 
     private Connection con = null;
@@ -24,7 +27,8 @@ public class ConnectionDB {
     public Connection getConnection() throws Exception {
         try {
             Class.forName("org.postgresql.Driver");
-            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", dbusername, dbpassword);
+            con = DriverManager.getConnection("jdbc:postgresql://"
+                    + ipAddress + ":" + dbServerPort + "/" + dbName, dbusername, dbpassword);
             return con;
         } catch (Exception e) {
 
