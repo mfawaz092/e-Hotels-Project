@@ -4,13 +4,15 @@ public class Employee {
     private String fullName;
     private String address;
     private String hotelID;
+    private String position;
 
-    public Employee(int employeeID, String ssn_sin, String fullName, String address, String hotelID) {
+    public Employee(int employeeID, String ssn_sin, String fullName, String address, String hotelID, String position) {
         this.employeeID = employeeID;
         this.ssn_sin = ssn_sin;
         this.fullName = fullName;
         this.address = address;
         this.hotelID = hotelID;
+        this.position = position;
     }
 
     //getters
@@ -53,5 +55,11 @@ public class Employee {
 
     public void setHotelID(String hotelID) {
         this.hotelID = hotelID;
+    }
+    public String getPosition(String position) {
+        return position;
+    }
+    public void setPosition(String position) {
+        this.position = position;
     }
 }
