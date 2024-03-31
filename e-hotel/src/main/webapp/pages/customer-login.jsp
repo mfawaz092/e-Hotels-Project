@@ -2,12 +2,29 @@
 <html>
 <head>
     <title>Customer Login</title>
+    <script>
+        function validateLogin() {
+            var username = document.getElementById("customerUsername").value;
+            var password = document.getElementById("customerPassword").value;
+
+            // Check if username and password are correct
+            if (username === "customer" && password === "123") {
+                // Redirect to homepage
+                window.location.href = "customer-homepage.jsp"; // Replace "../homepage.html" with the actual URL of your homepage
+            } else {
+                // Display error message
+                alert("Wrong credentials. Please try again.");
+            }
+
+            // Prevent form submission
+            return false;
+        }
+    </script>
 </head>
 <body>
 <div class="container">
-    <a href="../index.jsp">Return to home</a>
     <h1>Customer Login</h1>
-    <form action="../CustomerLogin" method="post">
+    <form onsubmit="return validateLogin()">
         <label for="customerUsername">Username:</label>
         <input type="text" id="customerUsername" name="customerUsername" required>
 

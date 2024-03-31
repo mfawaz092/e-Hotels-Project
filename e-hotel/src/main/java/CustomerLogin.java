@@ -15,7 +15,7 @@ public class CustomerLogin extends HttpServlet {
         if (isValidUser(customerUsername, customerPassword)) {
             HttpSession session = request.getSession();
             session.setAttribute("customerUsername", customerUsername);
-            response.sendRedirect("customer-homepage.jsp");
+            response.sendRedirect("/pages/customer-homepage.jsp");
         } else {
             request.setAttribute("error", "Invalid username or password");
             request.getRequestDispatcher("customer-login.jsp").forward(request, response);
