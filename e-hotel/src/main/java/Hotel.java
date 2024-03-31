@@ -9,6 +9,10 @@ public class Hotel {
     private int stars;
     private int chainID;
 
+    public Hotel() {
+
+    }
+
     public Hotel(int hotelID, String category, String name, String address, String email, String phone, int numberOfRooms, int stars, int chainID) {
         this.hotelID = hotelID;
         this.category = category;
