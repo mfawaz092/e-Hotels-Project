@@ -4,9 +4,27 @@
     <title>Customer Interface</title>
     <script>
         function updateAvailableRooms() {
-            // Code to update available rooms based on selected criteria
-            // You can use JavaScript to fetch data from a server or manipulate the DOM
-        }
+            const startDate = document.getElementById("start-date").value;
+            const endDate = document.getElementById("end-date").value;
+            const capacity = parseInt(document.getElementById("room-capacity").value);
+            const area = document.getElementById("area").value;
+            const chain = document.getElementById("hotel-chain").value;
+            const category = document.getElementById("hotel-category").value;
+            const totalRooms = parseInt(document.getElementById("total-rooms").value);
+            const priceUnder = parseInt(document.getElementById("price").value);
+
+            // Make an HTTP request to server-side endpoint
+            fetch('/getAvailableRooms?startDate=' + startDate + '&endDate=' + endDate + '&capacity='
+                + capacity + '&area=' + area + '&minPrice=' + 0 + '&maxPrice=' + priceUnder
+                + '&chainId=' + chain + "&category=" + category + '&totalRooms=' + totalRooms)
+                .then(response => response.text())  // Treat the response as text
+                .then(data => {
+                    // Process the response and update UI
+                    const availableRoomsDiv = document.getElementById("available-rooms");
+                    availableRoomsDiv.innerHTML = data;  // Insert the HTML into the div
+                })
+                .catch(error => console.error('Error fetching data:', error));
+                    }
     </script>
 </head>
 <body>
@@ -37,10 +55,9 @@
     <label for="hotel-category">Hotel Category:</label>
     <select id="hotel-category" onchange="updateAvailableRooms()">
         <option value="">Any</option>
-        <option value="1">Economy (1-2 stars)</option>
-        <option value="2">Standard (3-4 stars)</option>
-        <option value="3">Luxury (4 stars)</option>
-        <!-- Add more options as needed -->
+        <option value="Economy">Economy (1-2 stars)</option>
+        <option value="Standard">Standard (3-4 stars)</option>
+        <option value="Luxury">Luxury (4 stars)</option>
     </select>
 
     <label for="total-rooms">Total Rooms:</label>
@@ -55,7 +72,7 @@
     </select>
 
     <div id="available-rooms">
-        <!-- Display available rooms here based on selected criteria -->
+        No results
     </div>
 </body>
 </html>
