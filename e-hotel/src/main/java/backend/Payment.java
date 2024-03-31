@@ -1,36 +1,36 @@
 package backend;
 
 public class Payment {
-    private int paymentID;
-    private int customerID;
+    private int paymentId;
+    private int customerId;
     private double amount;
-    private int rentingID;
+    private int rentingId;
     private String paymentMethod;
     private String paymentStatus;
 
-    public Payment(int paymentID, int customerID, double amount, int rentingID, String paymentMethod, String paymentStatus) {
-        this.paymentID = paymentID;
-        this.customerID = customerID;
+    public Payment(int paymentId, int customerId, double amount, int rentingId, String paymentMethod, String paymentStatus) {
+        this.paymentId = paymentId;
+        this.customerId = customerId;
         this.amount = amount;
-        this.rentingID = rentingID;
+        this.rentingId = rentingId;
         this.paymentMethod = paymentMethod;
         this.paymentStatus = paymentStatus;
     }
 
-    public int getPaymentID() {
-        return paymentID;
+    public int getPaymentId() {
+        return paymentId;
     }
 
-    public void setPaymentID(int paymentID) {
-        this.paymentID = paymentID;
+    public void setPaymentId(int paymentId) {
+        this.paymentId = paymentId;
     }
 
-    public int getCustomerID() {
-        return customerID;
+    public int getCustomerId() {
+        return customerId;
     }
 
-    public void setCustomerID(int customerID) {
-        this.customerID = customerID;
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 
     public double getAmount() {
@@ -41,12 +41,12 @@ public class Payment {
         this.amount = amount;
     }
 
-    public int getRentingID() {
-        return rentingID;
+    public int getRentingId() {
+        return rentingId;
     }
 
-    public void setRentingID(int rentingID) {
-        this.rentingID = rentingID;
+    public void setRentingId(int rentingId) {
+        this.rentingId = rentingId;
     }
 
     public String getPaymentMethod() {

@@ -1,67 +1,69 @@
 package backend;
 
-public class Booking {
-    private int bookingID;
-    private String bookingDate;
-    private String checkInDate;
-    private String checkOutDate;
-    private int customerID;
-    private int roomID;
+import java.util.Date;
 
-    public Booking(int bookingID, String bookingDate, String checkInDate, String checkOutDate, int customerID, int roomID) {
-        this.bookingID = bookingID;
+public class Booking {
+    private int bookingId;
+    private Date bookingDate;
+    private Date checkInDate;
+    private Date checkOutDate;
+    private int customerId;
+    private int roomId;
+
+    public Booking(int bookingId, Date bookingDate, Date checkInDate, Date checkOutDate, int customerId, int roomId) {
+        this.bookingId = bookingId;
         this.bookingDate = bookingDate;
         this.checkInDate = checkInDate;
         this.checkOutDate = checkOutDate;
-        this.customerID = customerID;
-        this.roomID = roomID;
+        this.customerId = customerId;
+        this.roomId = roomId;
     }
 
-    public int getBookingID() {
-        return bookingID;
+    public int getBookingId() {
+        return bookingId;
     }
 
-    public void setBookingID(int bookingID) {
-        this.bookingID = bookingID;
+    public void setBookingId(int bookingId) {
+        this.bookingId = bookingId;
     }
 
-    public String getBookingDate() {
+    public Date getBookingDate() {
         return bookingDate;
     }
 
-    public void setBookingDate(String bookingDate) {
+    public void setBookingDate(Date bookingDate) {
         this.bookingDate = bookingDate;
     }
 
-    public String getCheckInDate() {
+    public Date getCheckInDate() {
         return checkInDate;
     }
 
-    public void setCheckInDate(String checkInDate) {
+    public void setCheckInDate(Date checkInDate) {
         this.checkInDate = checkInDate;
     }
 
-    public String getCheckOutDate() {
+    public Date getCheckOutDate() {
         return checkOutDate;
     }
 
-    public void setCheckOutDate(String checkOutDate) {
+    public void setCheckOutDate(Date checkOutDate) {
         this.checkOutDate = checkOutDate;
     }
 
-    public int getCustomerID() {
-        return customerID;
+    public int getCustomerId() {
+        return customerId;
     }
 
-    public void setCustomerID(int customerID) {
-        this.customerID = customerID;
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 
-    public int getRoomID() {
-        return roomID;
+    public int getRoomId() {
+        return roomId;
     }
 
-    public void setRoomID(int roomID) {
-        this.roomID = roomID;
+    public void setRoomId(int roomId) {
+        this.roomId = roomId;
     }
 }

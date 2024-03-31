@@ -1,59 +1,57 @@
 package backend;
 
 public class Employee {
-    private int employeeID;
-    private String ssn_sin;
-    private String fullName;
+    private int employeeId;
+    private String ssnSin;
+    private String name;
     private String address;
-    private int hotelID;
+    private int hotelId;
 
-    public Employee(int employeeID, String ssn_sin, String fullName, String address, int hotelID) {
-        this.employeeID = employeeID;
-        this.ssn_sin = ssn_sin;
-        this.fullName = fullName;
+    public Employee(int employeeId, String ssnSin, String name, String address, int hotelId) {
+        this.employeeId = employeeId;
+        this.ssnSin = ssnSin;
+        this.name = name;
         this.address = address;
-        this.hotelID = hotelID;
+        this.hotelId = hotelId;
     }
 
-    //getters
-    public int getEmployeeID() {
-        return employeeID;
+    public int getEmployeeId() {
+        return employeeId;
     }
 
-    public String getSsn_sin() {
-        return ssn_sin;
+    public void setEmployeeId(int employeeId) {
+        this.employeeId = employeeId;
     }
 
-    public String getFullName() {
-        return fullName;
+    public String getSsnSin() {
+        return ssnSin;
+    }
+
+    public void setSsnSin(String ssnSin) {
+        this.ssnSin = ssnSin;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getAddress() {
         return address;
     }
 
-    public int getHotelID() {
-        return hotelID;
-    }
-
-    //setters
-    public void setEmployeeID(int employeeID) {
-        this.employeeID = employeeID;
-    }
-
-    public void setSsn_sin(String ssn_sin) {
-        this.ssn_sin = ssn_sin;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
-
     public void setAddress(String address) {
         this.address = address;
     }
 
-    public void setHotelID(int hotelID) {
-        this.hotelID = hotelID;
+    public int getHotelId() {
+        return hotelId;
+    }
+
+    public void setHotelId(int hotelId) {
+        this.hotelId = hotelId;
     }
 }

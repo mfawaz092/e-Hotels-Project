@@ -1,47 +1,50 @@
 package backend;
 
+import java.util.Date;
+
 public class Renting {
-    private int rentingID;
-    private String rentingDate;
-    private int bookingID;
-    private int customerID;
+    private int rentingId;
+    private Date rentingDate;
+    private int bookingId;
+    private int customerId;
 
-    public Renting(int rentingID, String rentingDate, int bookingID, int customerID) {
-        this.rentingID = rentingID;
+    public Renting(int rentingId, Date rentingDate, int bookingId, int customerId) {
+        this.rentingId = rentingId;
         this.rentingDate = rentingDate;
-        this.bookingID = bookingID;
-        this.customerID = customerID;
+        this.bookingId = bookingId;
+        this.customerId = customerId;
     }
 
-    public int getRentingID() {
-        return rentingID;
+    public int getRentingId() {
+        return rentingId;
     }
 
-    public void setRentingID(int rentingID) {
-        this.rentingID = rentingID;
+    public void setRentingId(int rentingId) {
+        this.rentingId = rentingId;
     }
 
-    public String getRentingDate() {
+    public Date getRentingDate() {
         return rentingDate;
     }
 
-    public void setRentingDate(String rentingDate) {
+    public void setRentingDate(Date rentingDate) {
         this.rentingDate = rentingDate;
     }
 
-    public int getBookingID() {
-        return bookingID;
+    public int getBookingId() {
+        return bookingId;
     }
 
-    public void setBookingID(int bookingID) {
-        this.bookingID = bookingID;
+    public void setBookingId(int bookingId) {
+        this.bookingId = bookingId;
     }
 
-    public int getCustomerID() {
-        return customerID;
+    public int getCustomerId() {
+        return customerId;
     }
 
-    public void setCustomerID(int customerID) {
-        this.customerID = customerID;
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 }
+

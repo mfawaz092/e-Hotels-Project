@@ -1,40 +1,34 @@
 package backend;
 
 public class Room {
-    private int roomID;
-    private int price;
+    private int roomId;
+    private int hotelId;
     private int capacity;
-    private boolean extendable;
-    private String view;
-    private int hotelID;
+    private String area;
+    private double price;
 
-    public Room(int roomID, int price, int capacity, boolean extendable, String view, int hotelID) {
-        this.roomID = roomID;
-        this.price = price;
+    public Room(int roomId, int hotelId, int capacity, String area, double price) {
+        this.roomId = roomId;
+        this.hotelId = hotelId;
         this.capacity = capacity;
-        this.extendable = extendable;
-        this.view = view;
-        this.hotelID = hotelID;
-    }
-
-    public Room() {
-
-    }
-
-    public int getRoomID() {
-        return roomID;
-    }
-
-    public void setRoomID(int roomID) {
-        this.roomID = roomID;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
+        this.area = area;
         this.price = price;
+    }
+
+    public int getRoomId() {
+        return roomId;
+    }
+
+    public void setRoomId(int roomId) {
+        this.roomId = roomId;
+    }
+
+    public int getHotelId() {
+        return hotelId;
+    }
+
+    public void setHotelId(int hotelId) {
+        this.hotelId = hotelId;
     }
 
     public int getCapacity() {
@@ -45,27 +39,19 @@ public class Room {
         this.capacity = capacity;
     }
 
-    public boolean isExtendable() {
-        return extendable;
+    public String getArea() {
+        return area;
     }
 
-    public void setExtendable(boolean extendable) {
-        this.extendable = extendable;
+    public void setArea(String area) {
+        this.area = area;
     }
 
-    public String getView() {
-        return view;
+    public double getPrice() {
+        return price;
     }
 
-    public void setView(String view) {
-        this.view = view;
-    }
-
-    public int getHotelID() {
-        return hotelID;
-    }
-
-    public void setHotelID(int hotelID) {
-        this.hotelID = hotelID;
+    public void setPrice(double price) {
+        this.price = price;
     }
 }

@@ -3,59 +3,59 @@ package backend;
 import java.util.Date;
 
 public class Customer {
-    private int customerID;
+    private int customerId;
     private String idType;
-    private String fullName;
+    private String name;
     private String address;
     private Date registrationDate;
 
-    public Customer(int customerID, String idType, String fullName, String address, Date registrationDate) {
-        this.customerID = customerID;
+    public Customer(int customerId, String idType, String name, String address, Date registrationDate) {
+        this.customerId = customerId;
         this.idType = idType;
-        this.fullName = fullName;
+        this.name = name;
         this.address = address;
         this.registrationDate = registrationDate;
     }
 
-    //getters
-    public int getCustomerID() {
-        return customerID;
+    public int getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 
     public String getIdType() {
         return idType;
     }
 
-    public String getFullName() {
-        return fullName;
+    public void setIdType(String idType) {
+        this.idType = idType;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getAddress() {
         return address;
     }
 
-    public Date getRegistrationDate() {
-        return registrationDate;
-    }
-
-    //setters
-    public void setCustomerID(int customerID) {
-        this.customerID = customerID;
-    }
-
-    public void setIdType(String idType) {
-        this.idType = idType;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
-
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public Date getRegistrationDate() {
+        return registrationDate;
     }
 
     public void setRegistrationDate(Date registrationDate) {
         this.registrationDate = registrationDate;
     }
 }
+
+
