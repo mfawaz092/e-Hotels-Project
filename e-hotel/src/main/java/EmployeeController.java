@@ -64,4 +64,47 @@ public class EmployeeController {
             return false;
         }
     }
+
+    public boolean turnBookingIntoRenting(Booking booking) {
+        String sqlUpdate = "ALTER TABLE Booking ADD COLUMN status VARCHAR(50)";
+        String sqlInsert = "UPDATE Booking SET status = 'RENTED' WHERE booking_id = ?";
+
+        try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+             PreparedStatement alterStatement = connection.prepareStatement(sqlUpdate);
+             PreparedStatement updateStatement = connection.prepareStatement(sqlInsert)) {
+
+            // Add status column to Booking table
+            alterStatement.executeUpdate();
+
+            // Set booking ID parameter
+            updateStatement.setInt(1, booking.getBookingID());
+
+            int rowsAffected = updateStatement.executeUpdate();
+            return rowsAffected > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public boolean insertCustomerPayment(Payment payment) {
+        String sqlInsert = "INSERT INTO Payment (customer_id, amount, renting_id, payment_method, payment_status) " +
+                "VALUES (?, ?, ?, ?, ?)";
+
+        try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+             PreparedStatement statement = connection.prepareStatement(sqlInsert)) {
+            // Set payment details
+            statement.setInt(1, payment.getCustomerID());
+            statement.setDouble(2, payment.getAmount());
+            statement.setInt(3, payment.getRentingID());
+            statement.setString(4, payment.getPaymentMethod());
+            statement.setString(5, payment.getPaymentStatus());
+
+            int rowsAffected = statement.executeUpdate();
+            return rowsAffected > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
 }
