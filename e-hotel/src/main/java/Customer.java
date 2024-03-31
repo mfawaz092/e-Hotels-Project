@@ -33,4 +33,25 @@ public class Customer {
     public String getRegistrationDate() {
         return registrationDate;
     }
+
+    //setters
+    public void setCustomerID(int customerID) {
+        this.customerID = customerID;
+    }
+
+    public void setIdType(String idType) {
+        this.idType = idType;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setRegistrationDate(String registrationDate) {
+        this.registrationDate = registrationDate;
+    }
 }
