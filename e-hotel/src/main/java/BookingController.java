@@ -17,7 +17,10 @@ public class BookingController {
                                            int numberOfRooms, int price) {
 
         List<Room> availableRooms = new ArrayList<>();
-
+        // right now the only criteria are capacity and price. Not sure how
+        // to write the query to also retrieve the dates (start, end) of booking or renting,
+        // the area, the hotel chain, the category of the hotel, and the total number
+        // of rooms in the hotel,
         String sqlQuery = "SELECT * FROM Room WHERE capacity >= ? AND price <= ?";
 
         try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
