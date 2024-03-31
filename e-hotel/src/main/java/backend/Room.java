@@ -6,13 +6,22 @@ public class Room {
     private int capacity;
     private String area;
     private double price;
+    private boolean extendable;
+    private String view;
 
-    public Room(int roomId, int hotelId, int capacity, String area, double price) {
+    public Room(int roomId, int hotelId, int capacity, String area, double price, boolean extendable
+    , String view) {
         this.roomId = roomId;
         this.hotelId = hotelId;
         this.capacity = capacity;
         this.area = area;
         this.price = price;
+        this.extendable = extendable;
+        this.view = view;
+    }
+
+    public Room() {
+        
     }
 
     public int getRoomId() {
@@ -53,5 +62,21 @@ public class Room {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public void setExtendable(boolean extendable) {
+        this.extendable = extendable;
+    }
+
+    public void setView(String view) {
+        this.view = view;
+    }
+
+    public boolean isExtendable() {
+        return extendable;
+    }
+
+    public String getView() {
+        return view;
     }
 }
