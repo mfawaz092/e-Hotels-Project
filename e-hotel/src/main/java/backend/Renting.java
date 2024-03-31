@@ -1,3 +1,5 @@
+package backend;
+
 public class Renting {
     private int rentingID;
     private String rentingDate;

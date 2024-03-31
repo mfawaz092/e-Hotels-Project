@@ -1,3 +1,5 @@
+package backend;
+
 public class Hotel {
     private int hotelID;
     private String category;

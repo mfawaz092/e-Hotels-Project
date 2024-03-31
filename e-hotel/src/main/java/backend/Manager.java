@@ -1,3 +1,5 @@
+package backend;
+
 public class Manager {
     private int managerID;
     private String ssn_sin;

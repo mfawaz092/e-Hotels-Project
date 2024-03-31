@@ -1,3 +1,5 @@
+package backend;
+
 public class Booking {
     private int bookingID;
     private String bookingDate;

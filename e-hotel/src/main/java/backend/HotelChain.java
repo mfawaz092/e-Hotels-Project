@@ -1,3 +1,5 @@
+package backend;
+
 public class HotelChain {
     private int chainID;
     private String name;

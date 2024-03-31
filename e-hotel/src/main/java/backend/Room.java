@@ -1,3 +1,5 @@
+package backend;
+
 public class Room {
     private int roomID;
     private int price;
