@@ -5,18 +5,18 @@ public class Room {
     private boolean extendable;
     private String view;
     private int hotelID;
-    private String condition;
-    private String amenities;
 
-    public Room(int roomID, int price, int capacity, boolean extendable, String view, int hotelID, String condition, String amenities) {
+    public Room(int roomID, int price, int capacity, boolean extendable, String view, int hotelID) {
         this.roomID = roomID;
         this.price = price;
         this.capacity = capacity;
         this.extendable = extendable;
         this.view = view;
         this.hotelID = hotelID;
-        this.condition = condition;
-        this.amenities = amenities;
+    }
+
+    public Room() {
+
     }
 
     public int getRoomID() {
@@ -65,21 +65,5 @@ public class Room {
 
     public void setHotelID(int hotelID) {
         this.hotelID = hotelID;
-    }
-
-    public String getCondition() {
-        return condition;
-    }
-
-    public void setCondition(String condition) {
-        this.condition = condition;
-    }
-
-    public String getAmenities() {
-        return amenities;
-    }
-
-    public void setAmenities(String amenities) {
-        this.amenities = amenities;
     }
 }

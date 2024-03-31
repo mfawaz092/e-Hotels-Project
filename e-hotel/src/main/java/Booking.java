@@ -4,9 +4,9 @@ public class Booking {
     private String checkInDate;
     private String checkOutDate;
     private int customerID;
-    private String roomID;
+    private int roomID;
 
-    public Booking(int bookingID, String bookingDate, String checkInDate, String checkOutDate, int customerID, String roomID) {
+    public Booking(int bookingID, String bookingDate, String checkInDate, String checkOutDate, int customerID, int roomID) {
         this.bookingID = bookingID;
         this.bookingDate = bookingDate;
         this.checkInDate = checkInDate;
@@ -55,11 +55,11 @@ public class Booking {
         this.customerID = customerID;
     }
 
-    public String getRoomID() {
+    public int getRoomID() {
         return roomID;
     }
 
-    public void setRoomID(String roomID) {
+    public void setRoomID(int roomID) {
         this.roomID = roomID;
     }
 }
