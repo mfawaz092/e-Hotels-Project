@@ -1,11 +1,13 @@
+import java.util.Date;
+
 public class Customer {
     private int customerID;
     private String idType;
     private String fullName;
     private String address;
-    private String registrationDate;
+    private Date registrationDate;
 
-    public Customer(int customerID, String idType, String fullName, String address, String registrationDate) {
+    public Customer(int customerID, String idType, String fullName, String address, Date registrationDate) {
         this.customerID = customerID;
         this.idType = idType;
         this.fullName = fullName;
@@ -30,7 +32,7 @@ public class Customer {
         return address;
     }
 
-    public String getRegistrationDate() {
+    public Date getRegistrationDate() {
         return registrationDate;
     }
 
@@ -51,7 +53,7 @@ public class Customer {
         this.address = address;
     }
 
-    public void setRegistrationDate(String registrationDate) {
+    public void setRegistrationDate(Date registrationDate) {
         this.registrationDate = registrationDate;
     }
 }
