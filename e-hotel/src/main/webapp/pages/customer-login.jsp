@@ -3,7 +3,7 @@
 <head>
     <title>Customer Login</title>
     <script>
-        function validateLogin() {
+        function validateCustomerLogin() {
             var username = document.getElementById("customerUsername").value;
             var password = document.getElementById("customerPassword").value;
 
@@ -24,7 +24,7 @@
 <body>
 <div class="container">
     <h1>Customer Login</h1>
-    <form onsubmit="return validateLogin()">
+    <form onsubmit="return validateCustomerLogin()">
         <label for="customerUsername">Username:</label>
         <input type="text" id="customerUsername" name="customerUsername" required>
 

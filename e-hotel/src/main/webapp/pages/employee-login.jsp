@@ -3,7 +3,7 @@
 <head>
     <title>Employee Login</title>
     <script>
-        function validateLogin() {
+        function validateEmployeeLogin() {
             var username = document.getElementById("employeeUsername").value;
             var password = document.getElementById("employeePassword").value;
 
@@ -20,7 +20,7 @@
 <div class="container">
     <a href="../index.jsp">Return to home</a>
     <h1>Employee Login</h1>
-    <form onsubmit="return validateLogin()">
+    <form onsubmit="return validateEmployeeLogin()">
         <label for="employeeUsername">Username:</label>
         <input type="text" id="employeeUsername" name="employeeUsername" required>
 
