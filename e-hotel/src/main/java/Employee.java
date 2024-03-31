@@ -3,16 +3,14 @@ public class Employee {
     private String ssn_sin;
     private String fullName;
     private String address;
-    private String hotelID;
-    private String position;
+    private int hotelID;
 
-    public Employee(int employeeID, String ssn_sin, String fullName, String address, String hotelID, String position) {
+    public Employee(int employeeID, String ssn_sin, String fullName, String address, int hotelID) {
         this.employeeID = employeeID;
         this.ssn_sin = ssn_sin;
         this.fullName = fullName;
         this.address = address;
         this.hotelID = hotelID;
-        this.position = position;
     }
 
     //getters
@@ -32,7 +30,7 @@ public class Employee {
         return address;
     }
 
-    public String getHotelID() {
+    public int getHotelID() {
         return hotelID;
     }
 
@@ -53,13 +51,7 @@ public class Employee {
         this.address = address;
     }
 
-    public void setHotelID(String hotelID) {
+    public void setHotelID(int hotelID) {
         this.hotelID = hotelID;
-    }
-    public String getPosition(String position) {
-        return position;
-    }
-    public void setPosition(String position) {
-        this.position = position;
     }
 }
